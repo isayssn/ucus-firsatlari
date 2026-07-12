@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>🎿 Uçuş Avcısı — Fırsatlar</title>
+<style>
+:root{
+  --bg:#eef3f8;--surface:#fff;--surface-2:#f3f7fb;--ink:#10233b;--muted:#5d7188;
+  --faint:#8298b0;--line:#dce5ef;--line-2:#c6d4e2;--accent:#0e6ba8;--accent-ink:#0a4f7d;
+  --warm:#d97e00;--good:#1f9d6b;--sky-1:#dbe8f6;--sky-2:#eef3f8;--range:#b3c8de;
+  --pc:#f2960f;--tk:#c8102e;--vf:#5b21b6;--cal-mid:#d7e9fb;--cal-out:#b9cbdd;--cal-acc:#0e6ba8;
+  --accent-soft:#e3eefa;
+  --sh:0 1px 2px rgba(16,35,59,.05),0 8px 26px rgba(16,35,59,.07);
+  --sh-sm:0 1px 2px rgba(16,35,59,.05),0 3px 9px rgba(16,35,59,.05);
+  --mono:ui-monospace,"SF Mono",Menlo,monospace;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#0b1626;--surface:#111f33;--surface-2:#16273d;--ink:#eaf1f9;--muted:#9bb0c8;
+  --faint:#6f89a4;--line:#22354e;--line-2:#2d4463;--accent:#4aa3e0;--accent-ink:#8ec7ef;
+  --warm:#f7b23f;--good:#43c98d;--sky-1:#132743;--sky-2:#0b1626;--range:#213a58;
+  --pc:#f7a733;--tk:#e8384f;--vf:#8b5cf6;--cal-mid:#1e3a56;--cal-out:#41556f;--cal-acc:#2f7fbe;
+  --accent-soft:#15304a;
+  --sh:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
+  --sh-sm:0 1px 2px rgba(0,0,0,.3),0 4px 12px rgba(0,0,0,.28);
+}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+  line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:680px;margin:0 auto;padding:0 16px 64px}
+.hero{margin:0 -16px 20px;padding:38px 16px 30px;text-align:center;
+  background:linear-gradient(180deg,var(--sky-1),var(--sky-2));position:relative;overflow:hidden}
+.hero svg{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:64px}
+.hero h1{position:relative;margin:0;font-size:1.7rem;font-weight:800;letter-spacing:-.02em}
+.hero .st{position:relative;margin:8px 0 0;color:var(--accent-ink);font-weight:650;font-size:1rem}
+.hero .upd{position:relative;display:block;margin-top:6px;color:var(--muted);
+  font-size:.8rem;font-family:var(--mono)}
+.hpill{position:relative;display:inline-block;font-size:.7rem;font-weight:700;
+  letter-spacing:.09em;text-transform:uppercase;color:var(--accent-ink);
+  background:var(--surface);border:1px solid var(--line);padding:5px 13px;
+  border-radius:100px;margin-bottom:10px;box-shadow:var(--sh-sm)}
+.back{display:inline-block;color:var(--accent);text-decoration:none;font-weight:600;
+  font-size:.88rem;margin-bottom:14px}
+.back:hover{text-decoration:underline}
+.hublist{display:flex;flex-direction:column;gap:12px}
+.hub{display:block;text-decoration:none;background:var(--surface);border:1px solid var(--line);
+  border-radius:16px;padding:20px;box-shadow:var(--sh-sm);color:var(--ink);
+  transition:transform .12s ease,box-shadow .12s ease}
+.hub:hover{transform:translateY(-2px);box-shadow:var(--sh)}
+.hub-n{font-size:1.2rem;font-weight:800;letter-spacing:-.01em}
+.hub-l{color:var(--muted);margin-top:5px;font-size:.95rem}
+.hub-go{color:var(--accent);font-weight:700;margin-top:12px;font-size:.9rem}
+.toolbar{background:var(--surface);border:1px solid var(--line);border-radius:14px;
+  margin:0 0 16px;padding:9px 11px;box-shadow:var(--sh-sm);
+  display:flex;flex-direction:column;gap:8px}
+.tb-ctrls{display:flex;align-items:center;gap:8px}
+.tb-ctrls select{background:var(--surface-2);border:1px solid var(--line);border-radius:9px;
+  padding:7px 11px;font:inherit;font-size:.84rem;font-weight:600;color:var(--ink);cursor:pointer}
+.tb-ctrls select:focus{outline:0;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.tb-count{margin-left:auto;font-size:.75rem;color:var(--muted);white-space:nowrap;
+  font-variant-numeric:tabular-nums}
+.tb-chips{display:flex;align-items:center;gap:6px;overflow-x:auto;padding-bottom:1px;
+  scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.tb-chips::-webkit-scrollbar{display:none}
+.tb-ic{flex:0 0 auto;font-size:.82rem;opacity:.65;margin-right:1px}
+.fchip{flex:0 0 auto;position:relative;display:inline-flex;align-items:center;font-size:.78rem;
+  font-weight:600;background:var(--surface-2);border:1px solid var(--line);border-radius:100px;
+  padding:5px 12px;cursor:pointer;user-select:none;white-space:nowrap;color:var(--ink);
+  transition:background .12s ease,border-color .12s ease}
+.fchip input{position:absolute;opacity:0;width:0;height:0;margin:0}
+.fchip:has(input:checked){background:var(--cal-acc);border-color:var(--cal-acc);color:#fff}
+.fchip:has(input:focus-visible){outline:2px solid var(--accent);outline-offset:2px}
+.deal{background:var(--surface);border:1px solid var(--line);border-radius:16px;
+  padding:16px;margin-bottom:14px;box-shadow:var(--sh-sm)}
+.deal-top{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+.price{font-family:var(--mono);font-size:1.9rem;font-weight:800;color:var(--warm);
+  letter-spacing:-.02em;line-height:1;white-space:nowrap}
+.price .cur{font-size:.9rem;font-weight:700;margin-left:3px}
+.dest{min-width:0}
+.city{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.code{font-family:var(--mono);font-size:.72rem;font-weight:700;color:var(--accent-ink);
+  background:var(--surface-2);border:1px solid var(--line);padding:1px 6px;border-radius:6px}
+.sub{color:var(--muted);font-size:.85rem;margin-top:2px}
+.deal-body{display:flex;gap:14px;align-items:stretch;margin-bottom:14px}
+.legs{flex:1;min-width:0;display:flex;flex-direction:column;justify-content:center;gap:10px}
+.cals{flex:0 0 auto}
+.leg{display:flex;align-items:center;gap:9px;font-size:.9rem;flex-wrap:wrap}
+.dir{font-size:1rem;width:16px;text-align:center;flex:none;color:var(--faint)}
+.logo{width:30px;height:30px;border-radius:8px;flex:none;overflow:hidden;
+  display:grid;place-items:center;background:var(--surface-2);border:1px solid var(--line)}
+.logo img{width:100%;height:100%;object-fit:contain}
+.logo.txt{color:#fff;font-family:var(--mono);font-weight:700;font-size:.72rem;border:0}
+.route{font-family:var(--mono);font-weight:700;letter-spacing:.01em}
+.route .ar{color:var(--faint);margin:0 1px}
+.time{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.time .arr{color:var(--faint);font-size:.82em;margin-left:2px}
+.stops{color:var(--faint);font-size:.78rem;background:var(--surface-2);
+  border:1px solid var(--line);padding:1px 7px;border-radius:100px}
+.lp{margin-left:auto;font-family:var(--mono);font-weight:700}
+.lp small{font-weight:600;font-size:.78em;color:var(--muted)}
+.cal{background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:9px 11px;width:206px}
+.cal + .cal{margin-top:8px}
+.cal-h{text-align:center;font-weight:700;font-size:.8rem;margin-bottom:5px;color:var(--ink)}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);font-variant-numeric:tabular-nums}
+.cal-wd{text-align:center;font-size:.62rem;color:var(--faint);height:22px;line-height:22px;font-weight:700}
+.cal-d{text-align:center;font-size:.76rem;height:26px;line-height:26px;color:var(--ink)}
+.cal-d.out{color:var(--cal-out)}
+.cal-d.mid{background:var(--cal-mid)}
+.cal-d.start{background:var(--cal-acc);color:#fff;border-radius:9px 0 0 9px;font-weight:700}
+.cal-d.end{background:var(--cal-acc);color:#fff;border-radius:0 9px 9px 0;font-weight:700}
+.cal-d.one{background:var(--cal-acc);color:#fff;border-radius:9px;font-weight:700}
+@media(max-width:560px){.deal-body{flex-direction:column}.cals,.cal{width:100%}}
+.actions{display:flex;gap:8px;flex-wrap:nowrap;padding-top:13px;border-top:1px dashed var(--line-2)}
+.btn{flex:1 1 0;min-width:0;text-align:center;text-decoration:none;font-weight:700;font-size:.85rem;
+  padding:10px 12px;border-radius:10px;color:#fff;white-space:nowrap;overflow:hidden;
+  text-overflow:ellipsis;transition:transform .1s ease}
+.btn:active{transform:scale(.98)}
+.btn.pc{background:var(--pc)}.btn.tk{background:var(--tk)}.btn.vf{background:var(--vf)}
+.btn.google{background:var(--surface-2);color:var(--accent-ink);border:1px solid var(--line-2)}
+.empty{text-align:center;padding:56px 20px;background:var(--surface);border:1px solid var(--line);
+  border-radius:16px;box-shadow:var(--sh-sm)}
+.empty .ei{font-size:2.6rem}
+.empty h2{margin:12px 0 8px;font-size:1.25rem}
+.empty p{margin:0 auto;max-width:30em;color:var(--muted)}
+.foot{text-align:center;color:var(--faint);font-size:.8rem;margin-top:26px}
+a:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+</style>
+</head>
+<body>
+<header class="hero">
+  <svg viewBox="0 0 1200 64" preserveAspectRatio="none" aria-hidden="true">
+    <path fill="var(--range)" d="M0,64 L0,40 L160,14 L330,46 L520,10 L710,44 L900,12 L1080,40 L1200,20 L1200,64 Z"/>
+  </svg>
+  <div class="hpill">Hafta İçi</div>
+  <h1>🎿 Uçuş Avcısı</h1>
+  <p class="st">2 fırsat · en ucuz 2.500 TL</p>
+  <span class="upd">Son güncelleme: Paz 12 Tem 22:52</span>
+</header>
+<main class="wrap">
+<a class="back" href="./">← Tüm aramalar</a>
+<div class="toolbar"><div class="tb-ctrls"><select id="sortSel" onchange="applyFS()" aria-label="Sırala"><option value="price">Ucuz → pahalı</option><option value="price_desc">Pahalı → ucuz</option><option value="date">Tarihe göre</option><option value="city">Şehre göre</option><option value="nights">Geceye göre</option></select><select id="maxPrice" onchange="applyFS()" aria-label="Maksimum fiyat"><option value="">Maks ₺</option><option value="2500">≤ 2.500 TL</option><option value="3570">≤ 3.570 TL</option></select><span class="tb-count" id="tbCount"></span></div><div class="tb-chips"><span class="tb-ic">📍</span><label class="fchip"><input type="checkbox" class="fdest" value="Erzincan" checked onchange="applyFS()">Erzincan</label><label class="fchip"><input type="checkbox" class="fdest" value="Kars" checked onchange="applyFS()">Kars</label></div><div class="tb-chips"><span class="tb-ic">✈️</span><label class="fchip"><input type="checkbox" class="fair" value="Pegasus" checked onchange="applyFS()">Pegasus</label><label class="fchip"><input type="checkbox" class="fair" value="Turkish Airlines" checked onchange="applyFS()">Turkish Airlines</label></div></div><div id="deallist"><article class="deal" data-price="2500" data-dest="ERC" data-city="Erzincan" data-air="Pegasus" data-date="2027-01-20" data-nights="4" data-stops="0"><header class="deal-top"><div class="price">2.500<span class="cur">TL</span></div><div class="dest"><div class="city">Erzincan <span class="code">ERC</span></div><div class="sub">4 gece · Hafta İçi</div></div></header><div class="deal-body"><div class="legs"><div class="leg"><span class="dir">↗</span><span class="logo" title="Pegasus"><img src="https://www.gstatic.com/flights/airline_logos/70px/PC.png" alt="PC" loading="lazy" onerror="this.parentElement.classList.add(&#39;txt&#39;);this.parentElement.style.background=&#39;#f9a01b&#39;;this.parentElement.textContent=&#39;PC&#39;"></span><span class="route">SAW<span class="ar">→</span>ERC</span><span class="time">18:40<span class="arr">→20:05</span></span><span class="lp">1.290 <small>TL</small></span></div><div class="leg"><span class="dir">↘</span><span class="logo" title="Pegasus"><img src="https://www.gstatic.com/flights/airline_logos/70px/PC.png" alt="PC" loading="lazy" onerror="this.parentElement.classList.add(&#39;txt&#39;);this.parentElement.style.background=&#39;#f9a01b&#39;;this.parentElement.textContent=&#39;PC&#39;"></span><span class="route">ERC<span class="ar">→</span>SAW</span><span class="time">21:10<span class="arr">→22:45</span></span><span class="lp">1.210 <small>TL</small></span></div></div><div class="cals"><div class="cal"><div class="cal-h">Ocak 2027</div><div class="cal-grid"><div class="cal-wd">P</div><div class="cal-wd">S</div><div class="cal-wd">Ç</div><div class="cal-wd">P</div><div class="cal-wd">C</div><div class="cal-wd">C</div><div class="cal-wd">P</div><div class="cal-d out">28</div><div class="cal-d out">29</div><div class="cal-d out">30</div><div class="cal-d out">31</div><div class="cal-d">1</div><div class="cal-d">2</div><div class="cal-d">3</div><div class="cal-d">4</div><div class="cal-d">5</div><div class="cal-d">6</div><div class="cal-d">7</div><div class="cal-d">8</div><div class="cal-d">9</div><div class="cal-d">10</div><div class="cal-d">11</div><div class="cal-d">12</div><div class="cal-d">13</div><div class="cal-d">14</div><div class="cal-d">15</div><div class="cal-d">16</div><div class="cal-d">17</div><div class="cal-d">18</div><div class="cal-d">19</div><div class="cal-d start">20</div><div class="cal-d mid">21</div><div class="cal-d mid">22</div><div class="cal-d mid">23</div><div class="cal-d end">24</div><div class="cal-d">25</div><div class="cal-d">26</div><div class="cal-d">27</div><div class="cal-d">28</div><div class="cal-d">29</div><div class="cal-d">30</div><div class="cal-d">31</div></div></div></div></div><div class="actions"><a class="btn pc" href="https://web.flypgs.com/booking?adultCount=1&amp;currency=TL&amp;dateOption=1&amp;departurePort=SAW&amp;arrivalPort=ERC&amp;departureDate=2027-01-20&amp;returnDate=2027-01-24" target="_blank" rel="noopener">Pegasus&#x27;ta seç</a><a class="btn google" href="https://www.google.com/travel/flights?hl=tr&amp;curr=TRY&amp;q=Flights%20from%20SAW%20to%20ERC%20on%202027-01-20%20through%202027-01-24" target="_blank" rel="noopener">Google Flights</a></div></article><article class="deal" data-price="3570" data-dest="KSY" data-city="Kars" data-air="Turkish_Airlines" data-date="2027-01-06" data-nights="4" data-stops="0"><header class="deal-top"><div class="price">3.570<span class="cur">TL</span></div><div class="dest"><div class="city">Kars <span class="code">KSY</span></div><div class="sub">4 gece · Hafta İçi</div></div></header><div class="deal-body"><div class="legs"><div class="leg"><span class="dir">↗</span><span class="logo" title="Turkish Airlines"><img src="https://www.gstatic.com/flights/airline_logos/70px/TK.png" alt="TK" loading="lazy" onerror="this.parentElement.classList.add(&#39;txt&#39;);this.parentElement.style.background=&#39;#c8102e&#39;;this.parentElement.textContent=&#39;TK&#39;"></span><span class="route">IST<span class="ar">→</span>KSY</span><span class="time">07:15<span class="arr">→08:40</span></span><span class="lp">1.750 <small>TL</small></span></div><div class="leg"><span class="dir">↘</span><span class="logo" title="Turkish Airlines"><img src="https://www.gstatic.com/flights/airline_logos/70px/TK.png" alt="TK" loading="lazy" onerror="this.parentElement.classList.add(&#39;txt&#39;);this.parentElement.style.background=&#39;#c8102e&#39;;this.parentElement.textContent=&#39;TK&#39;"></span><span class="route">KSY<span class="ar">→</span>IST</span><span class="time">20:30<span class="arr">→22:05</span></span><span class="lp">1.820 <small>TL</small></span></div></div><div class="cals"><div class="cal"><div class="cal-h">Ocak 2027</div><div class="cal-grid"><div class="cal-wd">P</div><div class="cal-wd">S</div><div class="cal-wd">Ç</div><div class="cal-wd">P</div><div class="cal-wd">C</div><div class="cal-wd">C</div><div class="cal-wd">P</div><div class="cal-d out">28</div><div class="cal-d out">29</div><div class="cal-d out">30</div><div class="cal-d out">31</div><div class="cal-d">1</div><div class="cal-d">2</div><div class="cal-d">3</div><div class="cal-d">4</div><div class="cal-d">5</div><div class="cal-d start">6</div><div class="cal-d mid">7</div><div class="cal-d mid">8</div><div class="cal-d mid">9</div><div class="cal-d end">10</div><div class="cal-d">11</div><div class="cal-d">12</div><div class="cal-d">13</div><div class="cal-d">14</div><div class="cal-d">15</div><div class="cal-d">16</div><div class="cal-d">17</div><div class="cal-d">18</div><div class="cal-d">19</div><div class="cal-d">20</div><div class="cal-d">21</div><div class="cal-d">22</div><div class="cal-d">23</div><div class="cal-d">24</div><div class="cal-d">25</div><div class="cal-d">26</div><div class="cal-d">27</div><div class="cal-d">28</div><div class="cal-d">29</div><div class="cal-d">30</div><div class="cal-d">31</div></div></div></div></div><div class="actions"><a class="btn tk" href="https://www.turkishairlines.com/tr-tr/ucak-bileti/rezervasyon/ic-hat-musaitlik/" target="_blank" rel="noopener">THY&#x27;de aç</a><a class="btn google" href="https://www.google.com/travel/flights?hl=tr&amp;curr=TRY&amp;q=Flights%20from%20IST%20to%20KSY%20on%202027-01-06%20through%202027-01-10" target="_blank" rel="noopener">Google Flights</a></div></article></div><script>
+function applyFS(){
+  var el=document.getElementById('sortSel'); if(!el) return;
+  var sort=el.value;
+  var maxP=parseFloat(document.getElementById('maxPrice').value)||Infinity;
+  var cities=[].slice.call(document.querySelectorAll('.fdest:checked')).map(function(x){return x.value});
+  var airs=[].slice.call(document.querySelectorAll('.fair:checked')).map(function(x){return x.value.replace(/ /g,'_')});
+  var list=document.getElementById('deallist');
+  var cards=[].slice.call(list.querySelectorAll('.deal')); var shown=0;
+  cards.forEach(function(c){
+    var price=+c.dataset.price;
+    var cAirs=(c.dataset.air||'').split(' ');
+    var ok = price<=maxP && cities.indexOf(c.dataset.city)>=0 && cAirs.some(function(a){return airs.indexOf(a)>=0});
+    c.style.display = ok?'':'none'; if(ok) shown++;
+  });
+  var vis=cards.filter(function(c){return c.style.display!=='none'});
+  vis.sort(function(a,b){
+    if(sort==='price') return a.dataset.price-b.dataset.price;
+    if(sort==='price_desc') return b.dataset.price-a.dataset.price;
+    if(sort==='date') return a.dataset.date.localeCompare(b.dataset.date);
+    if(sort==='city') return a.dataset.city.localeCompare(b.dataset.city,'tr');
+    if(sort==='nights') return a.dataset.nights-b.dataset.nights;
+    return 0;
+  });
+  vis.forEach(function(c){list.appendChild(c)});
+  var cnt=document.getElementById('tbCount'); if(cnt) cnt.textContent=shown+' / '+cards.length+' görünüyor';
+}
+document.addEventListener('DOMContentLoaded', applyFS);
+</script>
+<p class="foot">Fiyatlar tarama anındaki değerlerdir, hızla değişebilir — butonla teyit et. · 🎿 Uçuş Avcısı</p>
+</main>
+</body>
+</html>
