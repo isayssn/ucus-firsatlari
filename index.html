@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>🎿 Uçuş Avcısı — Fırsatlar</title>
+<style>
+:root{
+  --bg:#eef3f8;--surface:#fff;--surface-2:#f3f7fb;--ink:#10233b;--muted:#5d7188;
+  --faint:#8298b0;--line:#dce5ef;--line-2:#c6d4e2;--accent:#0e6ba8;--accent-ink:#0a4f7d;
+  --warm:#d97e00;--good:#1f9d6b;--sky-1:#dbe8f6;--sky-2:#eef3f8;--range:#b3c8de;
+  --pc:#f2960f;--tk:#c8102e;--vf:#5b21b6;
+  --sh:0 1px 2px rgba(16,35,59,.05),0 8px 26px rgba(16,35,59,.07);
+  --sh-sm:0 1px 2px rgba(16,35,59,.05),0 3px 9px rgba(16,35,59,.05);
+  --mono:ui-monospace,"SF Mono",Menlo,monospace;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#0b1626;--surface:#111f33;--surface-2:#16273d;--ink:#eaf1f9;--muted:#9bb0c8;
+  --faint:#6f89a4;--line:#22354e;--line-2:#2d4463;--accent:#4aa3e0;--accent-ink:#8ec7ef;
+  --warm:#f7b23f;--good:#43c98d;--sky-1:#132743;--sky-2:#0b1626;--range:#213a58;
+  --pc:#f7a733;--tk:#e8384f;--vf:#8b5cf6;
+  --sh:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
+  --sh-sm:0 1px 2px rgba(0,0,0,.3),0 4px 12px rgba(0,0,0,.28);
+}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+  line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:680px;margin:0 auto;padding:0 16px 64px}
+.hero{margin:0 -16px 20px;padding:38px 16px 30px;text-align:center;
+  background:linear-gradient(180deg,var(--sky-1),var(--sky-2));position:relative;overflow:hidden}
+.hero svg{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:64px}
+.hero h1{position:relative;margin:0;font-size:1.7rem;font-weight:800;letter-spacing:-.02em}
+.hero .st{position:relative;margin:8px 0 0;color:var(--accent-ink);font-weight:650;font-size:1rem}
+.hero .upd{position:relative;display:block;margin-top:6px;color:var(--muted);
+  font-size:.8rem;font-family:var(--mono)}
+.deal{background:var(--surface);border:1px solid var(--line);border-radius:16px;
+  padding:16px;margin-bottom:14px;box-shadow:var(--sh-sm)}
+.deal-top{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+.price{font-family:var(--mono);font-size:1.9rem;font-weight:800;color:var(--warm);
+  letter-spacing:-.02em;line-height:1;white-space:nowrap}
+.price .cur{font-size:.9rem;font-weight:700;margin-left:3px}
+.dest{min-width:0}
+.city{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.code{font-family:var(--mono);font-size:.72rem;font-weight:700;color:var(--accent-ink);
+  background:var(--surface-2);border:1px solid var(--line);padding:1px 6px;border-radius:6px}
+.sub{color:var(--muted);font-size:.85rem;margin-top:2px}
+.dates{font-family:var(--mono);font-size:.92rem;color:var(--ink);background:var(--surface-2);
+  border:1px solid var(--line);border-radius:10px;padding:8px 12px;margin-bottom:12px;
+  display:flex;align-items:center;gap:8px;font-variant-numeric:tabular-nums}
+.legs{display:flex;flex-direction:column;gap:10px;margin-bottom:14px}
+.leg{display:flex;align-items:center;gap:9px;font-size:.9rem;flex-wrap:wrap}
+.dir{font-size:1rem;width:16px;text-align:center;flex:none;color:var(--faint)}
+.logo{width:30px;height:30px;border-radius:8px;flex:none;overflow:hidden;
+  display:grid;place-items:center;background:var(--surface-2);border:1px solid var(--line)}
+.logo img{width:100%;height:100%;object-fit:contain}
+.logo.txt{color:#fff;font-family:var(--mono);font-weight:700;font-size:.72rem;border:0}
+.route{font-family:var(--mono);font-weight:700;letter-spacing:.01em}
+.route .ar{color:var(--faint);margin:0 1px}
+.time{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.time .arr{color:var(--faint);font-size:.82em;margin-left:2px}
+.air{color:var(--muted);font-size:.86rem}
+.stops{color:var(--faint);font-size:.78rem;background:var(--surface-2);
+  border:1px solid var(--line);padding:1px 7px;border-radius:100px}
+.lp{margin-left:auto;font-family:var(--mono);font-weight:700}
+.lp small{font-weight:600;font-size:.78em;color:var(--muted)}
+.actions{display:flex;gap:8px;flex-wrap:wrap;padding-top:13px;border-top:1px dashed var(--line-2)}
+.btn{flex:1 1 auto;text-align:center;text-decoration:none;font-weight:700;font-size:.85rem;
+  padding:10px 12px;border-radius:10px;color:#fff;white-space:nowrap;transition:transform .1s ease}
+.btn:active{transform:scale(.98)}
+.btn.pc{background:var(--pc)}.btn.tk{background:var(--tk)}.btn.vf{background:var(--vf)}
+.btn.google{background:var(--surface-2);color:var(--accent-ink);border:1px solid var(--line-2)}
+.empty{text-align:center;padding:56px 20px;background:var(--surface);border:1px solid var(--line);
+  border-radius:16px;box-shadow:var(--sh-sm)}
+.empty .ei{font-size:2.6rem}
+.empty h2{margin:12px 0 8px;font-size:1.25rem}
+.empty p{margin:0 auto;max-width:30em;color:var(--muted)}
+.foot{text-align:center;color:var(--faint);font-size:.8rem;margin-top:26px}
+a:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+</style>
+</head>
+<body>
+<header class="hero">
+  <svg viewBox="0 0 1200 64" preserveAspectRatio="none" aria-hidden="true">
+    <path fill="var(--range)" d="M0,64 L0,40 L160,14 L330,46 L520,10 L710,44 L900,12 L1080,40 L1200,20 L1200,64 Z"/>
+  </svg>
+  <h1>🎿 Uçuş Avcısı</h1>
+  <p class="st">3 fırsat · en ucuz 2.898 TL</p>
+  <span class="upd">Son güncelleme: Paz 12 Tem 21:00</span>
+</header>
+<main class="wrap">
+<article class="deal"><header class="deal-top"><div class="price">2.898<span class="cur">TL</span></div><div class="dest"><div class="city">Kayseri · Erciyes <span class="code">ASR</span></div><div class="sub">2 gece · Hafta Sonu</div></div></header><div class="dates"><span class="cal">🗓</span>Cum 18 Ara → Paz 20 Ara</div><div class="legs"><div class="leg"><span class="dir">↗</span><span class="logo"><img src="https://www.gstatic.com/flights/airline_logos/70px/TK.png" alt="TK" loading="lazy" onerror="this.parentElement.classList.add(&#39;txt&#39;);this.parentElement.style.background=&#39;#c8102e&#39;;this.parentElement.textContent=&#39;TK&#39;"></span><span class="route">IST<span class="ar">→</span>ASR</span><span class="time">20:45<span class="arr">→22:10</span></span><span class="air">Turkish Airlines</span><span class="stops">aktarmasız</span><span class="lp">1.449 <small>TL</small></span></div><div class="leg"><span class="dir">↘</span><span class="logo"><img src="https://www.gstatic.com/flights/airline_logos/70px/TK.png" alt="TK" loading="lazy" onerror="this.parentElement.classList.add(&#39;txt&#39;);this.parentElement.style.background=&#39;#c8102e&#39;;this.parentElement.textContent=&#39;TK&#39;"></span><span class="route">ASR<span class="ar">→</span>IST</span><span class="time">22:55<span class="arr">→00:35</span></span><span class="air">Turkish Airlines</span><span class="stops">aktarmasız</span><span class="lp">1.449 <small>TL</small></span></div></div><div class="actions"><a class="btn tk" href="https://www.turkishairlines.com/tr-tr/ucak-bileti/rezervasyon/ic-hat-musaitlik/" target="_blank" rel="noopener">THY&#x27;de aç</a><a class="btn google" href="https://www.google.com/travel/flights?hl=tr&amp;curr=TRY&amp;q=Flights%20from%20IST%20to%20ASR%20on%202026-12-18%20through%202026-12-20" target="_blank" rel="noopener">Google Flights (rota+tarih)</a></div></article><article class="deal"><header class="deal-top"><div class="price">3.550<span class="cur">TL</span></div><div class="dest"><div class="city">Kayseri · Erciyes <span class="code">ASR</span></div><div class="sub">1 gece · Hafta Sonu</div></div></header><div class="dates"><span class="cal">🗓</span>Cmt 12 Ara → Paz 13 Ara</div><div class="legs"><div class="leg"><span class="dir">↗</span><span class="logo"><img src="https://www.gstatic.com/flights/airline_logos/70px/PC.png" alt="PC" loading="lazy" onerror="this.parentElement.classList.add(&#39;txt&#39;);this.parentElement.style.background=&#39;#f9a01b&#39;;this.parentElement.textContent=&#39;PC&#39;"></span><span class="route">SAW<span class="ar">→</span>ASR</span><span class="time">05:35<span class="arr">→06:50</span></span><span class="air">Pegasus</span><span class="stops">aktarmasız</span><span class="lp">1.603 <small>TL</small></span></div><div class="leg"><span class="dir">↘</span><span class="logo"><img src="https://www.gstatic.com/flights/airline_logos/70px/PC.png" alt="PC" loading="lazy" onerror="this.parentElement.classList.add(&#39;txt&#39;);this.parentElement.style.background=&#39;#f9a01b&#39;;this.parentElement.textContent=&#39;PC&#39;"></span><span class="route">ASR<span class="ar">→</span>SAW</span><span class="time">22:50<span class="arr">→00:20</span></span><span class="air">Pegasus</span><span class="stops">aktarmasız</span><span class="lp">1.947 <small>TL</small></span></div></div><div class="actions"><a class="btn pc" href="https://web.flypgs.com/booking?adultCount=1&amp;currency=TL&amp;dateOption=1&amp;departurePort=SAW&amp;arrivalPort=ASR&amp;departureDate=2026-12-12&amp;returnDate=2026-12-13" target="_blank" rel="noopener">Pegasus&#x27;ta seç</a><a class="btn google" href="https://www.google.com/travel/flights?hl=tr&amp;curr=TRY&amp;q=Flights%20from%20SAW%20to%20ASR%20on%202026-12-12%20through%202026-12-13" target="_blank" rel="noopener">Google Flights (rota+tarih)</a></div></article><article class="deal"><header class="deal-top"><div class="price">3.878<span class="cur">TL</span></div><div class="dest"><div class="city">Erzurum · Palandöken / Konaklı (Ejder 3200) <span class="code">ERZ</span></div><div class="sub">1 gece · Hafta Sonu</div></div></header><div class="dates"><span class="cal">🗓</span>Cmt 5 Ara → Paz 6 Ara</div><div class="legs"><div class="leg"><span class="dir">↗</span><span class="logo"><img src="https://www.gstatic.com/flights/airline_logos/70px/VF.png" alt="VF" loading="lazy" onerror="this.parentElement.classList.add(&#39;txt&#39;);this.parentElement.style.background=&#39;#5b21b6&#39;;this.parentElement.textContent=&#39;VF&#39;"></span><span class="route">SAW<span class="ar">→</span>ERZ</span><span class="time">05:35<span class="arr">→07:10</span></span><span class="air">AJet</span><span class="stops">aktarmasız</span><span class="lp">1.911 <small>TL</small></span></div><div class="leg"><span class="dir">↘</span><span class="logo"><img src="https://www.gstatic.com/flights/airline_logos/70px/VF.png" alt="VF" loading="lazy" onerror="this.parentElement.classList.add(&#39;txt&#39;);this.parentElement.style.background=&#39;#5b21b6&#39;;this.parentElement.textContent=&#39;VF&#39;"></span><span class="route">ERZ<span class="ar">→</span>SAW</span><span class="time">22:50<span class="arr">→00:30</span></span><span class="air">AJet</span><span class="stops">aktarmasız</span><span class="lp">1.967 <small>TL</small></span></div></div><div class="actions"><a class="btn vf" href="https://ajet.com/booking/availability" target="_blank" rel="noopener">AJet&#x27;te aç</a><a class="btn google" href="https://www.google.com/travel/flights?hl=tr&amp;curr=TRY&amp;q=Flights%20from%20SAW%20to%20ERZ%20on%202026-12-05%20through%202026-12-06" target="_blank" rel="noopener">Google Flights (rota+tarih)</a></div></article>
+<p class="foot">Fiyatlar tarama anındaki değerlerdir, hızla değişebilir — butonla teyit et. · 🎿 Uçuş Avcısı</p>
+</main>
+</body>
+</html>
